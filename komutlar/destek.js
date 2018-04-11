@@ -16,13 +16,15 @@ exports.run = (client, message, args) => {
     let reason = args.slice(1).join(' ');
     let user = message.mentions.users.first();
     let modlog = guild.channels.find('id', '433638952629436417');
+    if (reason.length < 1) return message.reply('Destek Talebini  Yazmalısın');
   
-    message.channel.sendMessage('@everyone')
+    guild.channels.get(modlog.id).send("@here **Yeni Destek Talebi Var!**") 
     const embed = new Discord.RichEmbed()
       .setColor(0x00AE86)
       .setTimestamp()
       .addField('Uyanın Yeni Çağrı Geldi','Hadi Hadi Hadi! ')
-      .addField('Kullanıcı:', `${message.author.username}#${message.author.discriminator}`)
+      .addField('Çağıran:', `${message.author.username}#${message.author.discriminator}`)
+      .addField('Taleb:', reason);
     return guild.channels.get(modlog.id).sendEmbed(embed);
   };
 
