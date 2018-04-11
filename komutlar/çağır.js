@@ -32,14 +32,14 @@ exports.run = (client, message, args) => {
   exports.conf = {
     enabled: true,
     guildOnly: true,
-    aliases: ['destek'],
+    aliases: ['çağır'],
     permLevel: 2
   };
   
   exports.help = {
-    name: 'destek',
+    name: 'çağır',
     description: 'Desteği Çağırır',
-    usage: 'destek'
+    usage: 'çağır'
   };
   
   
