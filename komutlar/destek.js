@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
     let guild = message.guild 
     let reason = args.slice(1).join(' ');
     let user = message.mentions.users.first();
-    let modlog = guild.channels.find('id', '433638952629436417');
+    let modlog = guild.channels.find('id', '433662317629145088');
     if (reason.length < 1) return message.reply('Destek Talebini  Yazmalısın');
     if (message.mentions.users.size < 1) return message.reply('Beni Etiketlemelisin Örnek Kullanım: `,destek @Destek Bot konu`').catch(console.error);
 
