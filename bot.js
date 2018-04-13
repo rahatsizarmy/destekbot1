@@ -82,7 +82,13 @@ client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
     msg.reply('Aleyküm selam,  hoş geldin ^^');
   }
+  if (msg.content.toLowerCase() === ',çağır') {
+    msg.reply('**Çağrın Yetkililere İletildi Yakında Burdalar! Sen Merak Etme!**');
+    msg.react("✅")
+  }
 });
+
+
 
 client.elevation = message => {
   if(!message.guild) {
