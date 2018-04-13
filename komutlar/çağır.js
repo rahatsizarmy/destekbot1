@@ -33,7 +33,7 @@ exports.run = (client, message, args) => {
     enabled: true,
     guildOnly: true,
     aliases: ['çağır'],
-    permLevel: 2
+    permLevel: 0
   };
   
   exports.help = {
