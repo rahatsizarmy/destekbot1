@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
     let user = message.mentions.users.first();
     let modlog = guild.channels.find('id', '433688839765098497');
     if (reason.length < 1) return message.reply('Destek Talebini  Yazmalısın');
-    if (message.mentions.users.size < 1) return message.reply('Beni Etiketlemelisin Örnek Kullanım: `,yardım @Destek Bot konu`').catch(console.error);
+    if (message.mentions.users.size < 1) return message.reply('Beni Etiketleyerek Kullan').catch(console.error);
 
     guild.channels.get(modlog.id).send("@here **Yeni Destek Talebi Var!**") 
     const embed = new Discord.RichEmbed()
@@ -32,7 +32,7 @@ exports.run = (client, message, args) => {
   exports.conf = {
     enabled: true,
     guildOnly: true,
-    aliases: ['yardım'],
+    aliases: ['destek'],
     permLevel: 0
   };
   
