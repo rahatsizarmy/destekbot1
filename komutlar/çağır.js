@@ -8,24 +8,19 @@ exports.run = (client, message, args) => {
 
     .addField('Merak Etme Yakında Destke Ekibimiz Burada')
     
-    .setColor(0xff0000)
-
-    return message.channel.sendEmbed(embed)
-    return message.author.sendEmbed(ozelmesajuyari); } 
+    .setColor(0x17FF03)
+    return message.channel.sendEmbed(embed); } 
     let guild = message.guild 
     let reason = args.slice(1).join(' ');
     let user = message.mentions.users.first();
     let modlog = guild.channels.find('id', '433662317629145088');
-    if (reason.length < 1) return message.reply('Destek Talebini  Yazmalısın');
-    if (message.mentions.users.size < 1) return message.reply('Beni Etiketlemelisin Örnek Kullanım: `,çağır @Destek Bot konu`').catch(console.error);
 
     guild.channels.get(modlog.id).send("@here **Yeni Destek Talebi Var!**") 
     const embed = new Discord.RichEmbed()
       .setColor(0x00AE86)
       .setTimestamp()
-      .addField('Uyanın Yeni Çağrı Geldi','Hadi Hadi Hadi! ')
-      .addField('Çağıran:', `${message.author.username}#${message.author.discriminator}`)
-      .addField('Taleb:', reason);
+      .addField('❯ Yeni Çağrı','Yeni Çağrı Geldi Yetkililer İlgilenmeniz Gerekmektedir!')
+      .addField('❯ Sizi Çağıran', `<@${message.author.id}>`)
     return guild.channels.get(modlog.id).sendEmbed(embed);
   };
 
@@ -41,5 +36,3 @@ exports.run = (client, message, args) => {
     description: 'Desteği Çağırır',
     usage: 'çağır'
   };
-  
-  
